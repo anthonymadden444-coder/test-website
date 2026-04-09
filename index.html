@@ -158,7 +158,7 @@
       overflow: hidden;
       background:
         linear-gradient(90deg, rgba(29, 16, 10, 0.82) 0%, rgba(29, 16, 10, 0.58) 42%, rgba(29, 16, 10, 0.28) 100%),
-        url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
+        url("priscilla-du-preez-g86airJZ4Gs-unsplash.jpg") center/cover no-repeat;
     }
 
     .hero::before {
@@ -374,6 +374,63 @@
       font-weight: 700;
     }
 
+    /* Reviews */
+    .reviews {
+      background: linear-gradient(180deg, #f7f0e7 0%, #fff8f1 100%);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .review-card {
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(90, 56, 40, 0.08);
+      border-radius: 16px;
+      padding: 28px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(90, 56, 40, 0.12);
+    }
+
+    .review-stars {
+      color: #d4a056;
+      font-size: 1.25rem;
+      margin-bottom: 14px;
+      letter-spacing: 2px;
+    }
+
+    .review-text {
+      color: var(--brown-dark);
+      font-size: 1rem;
+      line-height: 1.65;
+      margin-bottom: 18px;
+      font-style: italic;
+    }
+
+    .review-author {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .review-name {
+      color: var(--brown-dark);
+      font-weight: 600;
+    }
+
+    .review-date {
+      color: rgba(90, 56, 40, 0.6);
+      font-size: 0.875rem;
+    }
+
     /* Contacts */
     .contacts {
       background: linear-gradient(180deg, #fff8f1 0%, #f7f0e7 100%);
@@ -463,6 +520,10 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       .about-grid,
       .contact-grid {
         grid-template-columns: 1fr;
@@ -524,6 +585,10 @@
         grid-template-columns: 1fr;
       }
 
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
       .hero h1 {
         line-height: 1.02;
       }
@@ -554,6 +619,7 @@
         <ul class="nav-links">
           <li><a href="#about">О нас</a></li>
           <li><a href="#menu">Меню</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
           <li><a href="#contacts">Контакты</a></li>
         </ul>
 
@@ -683,6 +749,44 @@
       </div>
     </section>
 
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <h2 class="section-title">Отзывы гостей</h2>
+        <p class="section-text">
+          Наши гости делятся впечатлениями о атмосфере, кофе и сервисе.
+        </p>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Лучший кофе в городе! Атмосфера уютная, персонал доброжелательный. Обязательно вернусь за американо"</p>
+            <div class="review-author">
+              <span class="review-name">Анна К.</span>
+              <span class="review-date">15 марта 2026</span>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Прекрасное место для работы за ноутбуком. Вкусный латте, хороший Wi-Fi и тихая музыка. Рекомендую!"</p>
+            <div class="review-author">
+              <span class="review-name">Михаил С.</span>
+              <span class="review-date">12 марта 2026</span>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Зашла случайно — и теперь это моя любимая кофейня. Особенно понравился карамельный раф и круассаны!"</p>
+            <div class="review-author">
+              <span class="review-name">Елена В.</span>
+              <span class="review-date">8 марта 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section contacts" id="contacts">
       <div class="container">
         <h2 class="section-title">Контакты</h2>
@@ -694,10 +798,10 @@
           <div class="contact-card">
             <h3>Ждем вас каждый день</h3>
             <ul class="contact-list">
-              <li><strong>Адрес:</strong> ул. Кофейная, 12, центр города</li>
-              <li><strong>Часы работы:</strong> ежедневно с 08:00 до 21:00</li>
-              <li><strong>Телефон:</strong> +7 (900) 123-45-67</li>
-              <li><strong>Email:</strong> hello@2donutscoffee.ru</li>
+              <li><strong>📍 Адрес:</strong> ул. Кофейная, 12, центр города</li>
+              <li><strong>⏰ Часы работы:</strong> ежедневно с 08:00 до 21:00</li>
+              <li><strong>📞 Телефон:</strong> +7 (900) 123-45-67</li>
+              <li><strong>✉️ Email:</strong> hello@2donutscoffee.ru</li>
             </ul>
           </div>
 
